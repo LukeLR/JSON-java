@@ -528,6 +528,16 @@ public class JSONObject {
         throw new JSONException("JSONObject[" + quote(key)
                 + "] is not a Boolean.");
     }
+    /**
+     * Get the boolean associated with a key. If the key doesn't exist, or any errors occur, return defaultValue instead.
+     * 
+     * @param key A key String.
+     * @param defaultValue The value to return if the key doesn't exist or errors occur.
+     * @return The truth.
+     */
+    public boolean getBooleanSafe(String key, boolean defaultValue){
+    	if (has(key)) try {return getBoolean(key);} catch (JSONException ex) {return defaultValue;} else return defaultValue;
+    }
 
     /**
      * Get the BigInteger value associated with a key.
@@ -550,6 +560,17 @@ public class JSONObject {
     }
 
     /**
+     * Get the BigInteger value associated with a key. If the key doesn't exist, or any errors occur, return defaultValue instead.
+     * 
+     * @param key A key String.
+     * @param defaultValue The value to return if the key doesn't exist or errors occur.
+     * @return The numeric value.
+     */
+    public BigInteger getBigIntegerSafe(String key, BigInteger defaultValue){
+    	if (has(key)) try {return getBigInteger(key);} catch (JSONException ex) {return defaultValue;} else return defaultValue;
+    }
+    
+    /**
      * Get the BigDecimal value associated with a key.
      *
      * @param key
@@ -569,6 +590,17 @@ public class JSONObject {
         }
     }
 
+    /**
+     * Get the BigDecimal value associated with a key. If the key doesn't exist, or any errors occur, return defaultValue instead.
+     * 
+     * @param key A key String.
+     * @param defaultValue The value to return if the key doesn't exist or errors occur.
+     * @return The numeric value.
+     */
+    public BigDecimal getBigDecimalSafe(String key, BigDecimal defaultValue){
+    	if (has(key)) try {return getBigDecimal(key);} catch (JSONException ex) {return defaultValue;} else return defaultValue;
+    }
+    
     /**
      * Get the double value associated with a key.
      *
@@ -591,6 +623,17 @@ public class JSONObject {
     }
 
     /**
+     * Get the double value associated with a key. If the key doesn't exist, or any errors occur, return defaultValue instead.
+     * 
+     * @param key A key String.
+     * @param defaultValue The value to return if the key doesn't exist or errors occur.
+     * @return The numeric value.
+     */
+    public double getDoubleSafe(String key, double defaultValue){
+    	if (has(key)) try {return getDouble(key);} catch (JSONException ex) {return defaultValue;} else return defaultValue;
+    }
+    
+    /**
      * Get the int value associated with a key.
      *
      * @param key
@@ -611,6 +654,17 @@ public class JSONObject {
         }
     }
 
+    /**
+     * Get the int value associated with a key. If the key doesn't exist, or any errors occur, return defaultValue instead.
+     * 
+     * @param key A key String.
+     * @param defaultValue The value to return if the key doesn't exist or errors occur.
+     * @return The numeric value.
+     */
+    public int getIntSafe(String key, int defaultValue){
+    	if (has(key)) try {return getInt(key);} catch (JSONException ex) {return defaultValue;} else return defaultValue;
+    }
+    
     /**
      * Get the JSONArray value associated with a key.
      *
@@ -668,6 +722,17 @@ public class JSONObject {
         }
     }
 
+    /**
+     * Get the long value associated with a key. If the key doesn't exist, or any errors occur, return defaultValue instead.
+     * 
+     * @param key A key String.
+     * @param defaultValue The value to return if the key doesn't exist or errors occur.
+     * @return The numeric value.
+     */
+    public long getBigIntegerSafe(String key, long defaultValue){
+    	if (has(key)) try {return getLong(key);} catch (JSONException ex) {return defaultValue;} else return defaultValue;
+    }
+    
     /**
      * Get an array of field names from a JSONObject.
      *
@@ -727,6 +792,17 @@ public class JSONObject {
         throw new JSONException("JSONObject[" + quote(key) + "] not a string.");
     }
 
+    /**
+     * Get the string associated with a key. If the key doesn't exist, or any errors occur, return defaultValue instead.
+     * 
+     * @param key A key String.
+     * @param defaultValue The value to return if the key doesn't exist or errors occur.
+     * @return A string which is the value.
+     */
+    public String getStringSafe(String key, String defaultValue){
+    	if (has(key)) try {return getString(key);} catch (JSONException ex) {return defaultValue;} else return defaultValue;
+    }
+    
     /**
      * Determine if the JSONObject contains a specific key.
      *
