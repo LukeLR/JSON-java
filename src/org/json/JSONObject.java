@@ -534,6 +534,7 @@ public class JSONObject {
      * @param key A key String.
      * @param defaultValue The value to return if the key doesn't exist or errors occur.
      * @return The truth.
+     * @author Lukas Rose, lukas.rose@gmx.de
      */
     public boolean getBooleanSafe(String key, boolean defaultValue){
     	if (has(key)) try {return getBoolean(key);} catch (JSONException ex) {return defaultValue;} else return defaultValue;
@@ -565,6 +566,7 @@ public class JSONObject {
      * @param key A key String.
      * @param defaultValue The value to return if the key doesn't exist or errors occur.
      * @return The numeric value.
+     * @author Lukas Rose, lukas.rose@gmx.de
      */
     public BigInteger getBigIntegerSafe(String key, BigInteger defaultValue){
     	if (has(key)) try {return getBigInteger(key);} catch (JSONException ex) {return defaultValue;} else return defaultValue;
@@ -596,6 +598,7 @@ public class JSONObject {
      * @param key A key String.
      * @param defaultValue The value to return if the key doesn't exist or errors occur.
      * @return The numeric value.
+     * @author Lukas Rose, lukas.rose@gmx.de
      */
     public BigDecimal getBigDecimalSafe(String key, BigDecimal defaultValue){
     	if (has(key)) try {return getBigDecimal(key);} catch (JSONException ex) {return defaultValue;} else return defaultValue;
@@ -628,6 +631,7 @@ public class JSONObject {
      * @param key A key String.
      * @param defaultValue The value to return if the key doesn't exist or errors occur.
      * @return The numeric value.
+     * @author Lukas Rose, lukas.rose@gmx.de
      */
     public double getDoubleSafe(String key, double defaultValue){
     	if (has(key)) try {return getDouble(key);} catch (JSONException ex) {return defaultValue;} else return defaultValue;
@@ -660,6 +664,7 @@ public class JSONObject {
      * @param key A key String.
      * @param defaultValue The value to return if the key doesn't exist or errors occur.
      * @return The numeric value.
+     * @author Lukas Rose, lukas.rose@gmx.de
      */
     public int getIntSafe(String key, int defaultValue){
     	if (has(key)) try {return getInt(key);} catch (JSONException ex) {return defaultValue;} else return defaultValue;
@@ -728,6 +733,7 @@ public class JSONObject {
      * @param key A key String.
      * @param defaultValue The value to return if the key doesn't exist or errors occur.
      * @return The numeric value.
+     * @author Lukas Rose, lukas.rose@gmx.de
      */
     public long getBigIntegerSafe(String key, long defaultValue){
     	if (has(key)) try {return getLong(key);} catch (JSONException ex) {return defaultValue;} else return defaultValue;
@@ -798,6 +804,7 @@ public class JSONObject {
      * @param key A key String.
      * @param defaultValue The value to return if the key doesn't exist or errors occur.
      * @return A string which is the value.
+     * @author Lukas Rose, lukas.rose@gmx.de
      */
     public String getStringSafe(String key, String defaultValue){
     	if (has(key)) try {return getString(key);} catch (JSONException ex) {return defaultValue;} else return defaultValue;
